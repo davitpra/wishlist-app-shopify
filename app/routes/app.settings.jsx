@@ -15,19 +15,24 @@ import { TitleBar } from "@shopify/app-bridge-react";
 import { json } from "@remix-run/node";
 import { useLoaderData, Form } from "@remix-run/react";
 
+// import prima db to save the settings
+import db from "../db.server"
+
+
+
 // This function will be called at build time to get the settings
 export async function loader () {
 
-
   // This is the placeholder of form data
-  const settings = {
-    name: "My App",
-    description: "My app description"
-  }
+  let settings = await db.settings.findFirst();
+  console.log('setings --------->',settings)
 
   // it has to return a JSON object
   return json(settings)
 }
+
+
+
 
 // This function will be called when the form is submitted
 export async function action({ request }) {
@@ -37,6 +42,20 @@ export async function action({ request }) {
 
   // change the settings object to a JSON object
   settings = Object.fromEntries(settings);
+
+  //update the database
+  await db.settings.upsert({
+    where: { id: "1" },
+    create: {
+      id: "1",
+      name: settings.name,
+      description: settings.description,
+    },
+    update: {
+      name: settings.name,
+      description: settings.description,
+    }
+  });
 
   //it has to return a JSON object
   return json(settings);
@@ -82,13 +101,13 @@ export default function SettingsPage() {
                 <TextField 
                   label="App name" 
                   name="name"
-                  value={formState.name} 
+                  value={formState?.name} 
                   onChange={(value) => setFormState({ ...formState, name: value })} 
                 /> 
                 <TextField
                   label="Description"
                   name="description"
-                  value={formState.description}
+                  value={formState?.description}
                   onChange={(value) => setFormState({ ...formState, description: value })}
                 />
                 {/* the button must to have the submit property to submit the form */}
