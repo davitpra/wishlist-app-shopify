@@ -3,7 +3,7 @@
 client_id = "615bd3fce067badfcf109af3580406d6"
 name = "wishlist"
 handle = "wishlist-456"
-application_url = "https://lane-gratis-gadgets-craps.trycloudflare.com"
+application_url = "https://informative-mid-import-signup.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://lane-gratis-gadgets-craps.trycloudflare.com/auth/callback",
-  "https://lane-gratis-gadgets-craps.trycloudflare.com/auth/shopify/callback",
-  "https://lane-gratis-gadgets-craps.trycloudflare.com/api/auth/callback"
+  "https://informative-mid-import-signup.trycloudflare.com/auth/callback",
+  "https://informative-mid-import-signup.trycloudflare.com/auth/shopify/callback",
+  "https://informative-mid-import-signup.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
