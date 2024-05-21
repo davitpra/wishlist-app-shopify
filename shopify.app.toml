@@ -3,7 +3,7 @@
 client_id = "615bd3fce067badfcf109af3580406d6"
 name = "wishlist"
 handle = "wishlist-456"
-application_url = "https://pop-contamination-detailed-forever.trycloudflare.com"
+application_url = "https://handheld-radios-lanka-thereby.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://pop-contamination-detailed-forever.trycloudflare.com/auth/callback",
-  "https://pop-contamination-detailed-forever.trycloudflare.com/auth/shopify/callback",
-  "https://pop-contamination-detailed-forever.trycloudflare.com/api/auth/callback"
+  "https://handheld-radios-lanka-thereby.trycloudflare.com/auth/callback",
+  "https://handheld-radios-lanka-thereby.trycloudflare.com/auth/shopify/callback",
+  "https://handheld-radios-lanka-thereby.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
