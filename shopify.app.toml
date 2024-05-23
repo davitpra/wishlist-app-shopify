@@ -3,7 +3,7 @@
 client_id = "615bd3fce067badfcf109af3580406d6"
 name = "wishlist"
 handle = "wishlist-456"
-application_url = "https://sacrifice-dean-ahead-burden.trycloudflare.com"
+application_url = "https://social-charms-bit-heavily.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://sacrifice-dean-ahead-burden.trycloudflare.com/auth/callback",
-  "https://sacrifice-dean-ahead-burden.trycloudflare.com/auth/shopify/callback",
-  "https://sacrifice-dean-ahead-burden.trycloudflare.com/api/auth/callback"
+  "https://social-charms-bit-heavily.trycloudflare.com/auth/callback",
+  "https://social-charms-bit-heavily.trycloudflare.com/auth/shopify/callback",
+  "https://social-charms-bit-heavily.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
