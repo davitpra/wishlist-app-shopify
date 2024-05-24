@@ -17,9 +17,36 @@
     document.addEventListener('alpine:init', () => {
         Alpine.data('wishlist', () => ({
             wishlisted: false,
+            appUrl: "https://global-provisions-mainland-sunset.trycloudflare.com",
             addToWishlist() {
                 this.wishlisted = !this.wishlisted
+                {%  unless customer  %}
+                  // If customer is not login, show an alert to login
+                  alert('Please login to add to wishlist');
+                  return;
+                {% endunless %}
 
+                var formdata = new FormData();
+                formdata.append("custumerId", "{{ customer.id }}");
+                formdata.append("productId", "{{ product.id }}");
+                formdata.append("shop", "{{ shop.permanent_domain }}");
+
+                var requestOptions = {
+                  method: 'POST',
+                  body: formdata,
+                  redirect: 'follow'
+                };
+
+                fetch(this.appUrl + "/api/wishlist", requestOptions)
+                    .then(response => response.json())
+                    .then(result => {
+                        if(result.wishlisted){
+                          this.wishlisted = true;
+                        }else{
+                          this.wishlisted = false;
+                        }
+                    })
+                    .catch(error => console.log('error', error));
 
             }
         }))
