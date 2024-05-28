@@ -3,7 +3,7 @@
 client_id = "615bd3fce067badfcf109af3580406d6"
 name = "wishlist"
 handle = "wishlist-456"
-application_url = "https://quotes-john-indie-reduces.trycloudflare.com"
+application_url = "https://argentina-fragrances-located-suppose.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://quotes-john-indie-reduces.trycloudflare.com/auth/callback",
-  "https://quotes-john-indie-reduces.trycloudflare.com/auth/shopify/callback",
-  "https://quotes-john-indie-reduces.trycloudflare.com/api/auth/callback"
+  "https://argentina-fragrances-located-suppose.trycloudflare.com/auth/callback",
+  "https://argentina-fragrances-located-suppose.trycloudflare.com/auth/shopify/callback",
+  "https://argentina-fragrances-located-suppose.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
